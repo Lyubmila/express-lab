@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+<body>
+    <h1><%= pageHeader %></h1>
+
+    <div><>ID: <%= data.id %></div>
+    <div>Name: <%= data.name %> </div> 
+    <div>Email: <%= data.email %> </div>
+    <div>Address: <%= data.address.street %>, 
+        <%= data.address.suite %>, 
+        <%= data.address.city %>,
+        <%= data.address.zipcode %></div>
+    <div>Phone: <%= data.phone%> </div>
+
+</body>
+</html>
