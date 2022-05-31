@@ -9,14 +9,15 @@
 <body>
     <h1><%= pageHeader %></h1>
 
-    <div><>ID: <%= data.id %></div>
+    <div>ID: <%= data.id %></div>
     <div>Name: <%= data.name %> </div> 
     <div>Email: <%= data.email %> </div>
     <div>Address: <%= data.address.street %>, 
         <%= data.address.suite %>, 
         <%= data.address.city %>,
         <%= data.address.zipcode %></div>
-    <div>Phone: <%= data.phone%> </div>
+    <div>Phone: <%= data.phone%> </div> <br>
 
+    <div><a href="/students">Back to Students Page</a></div>
 </body>
 </html>

@@ -9,14 +9,22 @@
 <body>
     <h1><%= studentsPage%></h1>
     <div>
+        <ol>
+    
         <% data.map( (student, index) => { %>
-           
-            Student name: <%= student.name %> <br>
-            City: <%= student.address.city %> <br>
-            Phone: <%= student.phone  %> <br>
-       
+        
+        <li>
+
+        <ul>
+
+            <a href ="/students/<%=student.id %>" > <%=student.name %> </a>
+        </ul>
+        </li>
         <% }) %>
-</div>
+
+        </ol>
+        
+</div> <br>
 <div><a href="/">Back to Home Page</a></div>
 </body>
 </html>
