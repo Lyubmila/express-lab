@@ -14,7 +14,13 @@ app.set('view engine', 'ejs')
 app.set('views', './views')
 
 
-app.get('/', (req, res) =>{
+//home page
+app.get('/', function(req,res){
+    res.send(`<h1> Main Page </h1>
+                <p> This my bio</p>`)    
+} )
+
+app.get('/home', (req, res) =>{
     res.render('home',{
         homeTitleLab: 'Home Page',
         homePageHeader:'Welcome to Personal data'} )
@@ -22,6 +28,15 @@ app.get('/', (req, res) =>{
 
 app.get('/hello', (req, res) =>{
     res.send(`Hello students!!`)
+})
+
+app.get('/hello/:name/:lastName', (req,res) =>{
+    res.send(`Hello ${req.params.name} ${req.params.lastName}`)
+})
+
+
+app.get('/about', (req, res) =>{
+    res.send(`Here is something about us...`)
 })
 
 //shows all students
@@ -42,6 +57,10 @@ app.get('/students/:id', (req, res) =>{
         res.render('searchStudent', {pageHeader: 'Student Details', data:result[0]})
        }
 
+})
+
+app.get('/teachers', (req, res) =>{
+    res.send(`Here is our teaching staff...`)
 })
 
 
